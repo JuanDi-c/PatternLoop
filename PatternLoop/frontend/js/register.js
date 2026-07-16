@@ -1,56 +1,53 @@
-const form = document.getElementById("registerForm");
+const formulario = document.getElementById("registerForm");
 
-form.addEventListener("submit", function (e) {
+formulario.addEventListener("submit", async (e) => {
 
     e.preventDefault();
 
     const nombre = document.getElementById("nombre").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
+    const correo = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
 
-    const nombreError = document.getElementById("nombreError");
-    const emailError = document.getElementById("emailError");
-    const passwordError = document.getElementById("passwordError");
+    try {
 
-    nombreError.textContent = "";
-    emailError.textContent = "";
-    passwordError.textContent = "";
+        const respuesta = await fetch(`${API_URL}/usuarios/register`, {
 
-    let valido = true;
+            method: "POST",
 
-    // Nombre
-    if (nombre === "") {
-        nombreError.textContent = "El nombre es obligatorio.";
-        valido = false;
-    }
+            headers: {
+                "Content-Type": "application/json"
+            },
 
-    // Correo
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            body: JSON.stringify({
+                nombre,
+                correo,
+                password
+            })
 
-    if (email === "") {
-        emailError.textContent = "El correo es obligatorio.";
-        valido = false;
-    } else if (!emailRegex.test(email)) {
-        emailError.textContent = "Ingrese un correo válido.";
-        valido = false;
-    }
+        });
 
-    // Contraseña fuerte
-    const passwordRegex =
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.#_-])[A-Za-z\d@$!%*?&.#_-]{8,}$/;
+        const data = await respuesta.json();
 
-    if (password === "") {
-        passwordError.textContent = "La contraseña es obligatoria.";
-        valido = false;
-    } else if (!passwordRegex.test(password)) {
-        passwordError.textContent =
-            "Debe tener mínimo 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial.";
-        valido = false;
-    }
+        if (respuesta.ok) {
 
-    if (valido) {
-        alert("Formulario enviado correctamente");
-        form.submit();
+            alert(data.mensaje);
+
+            formulario.reset();
+
+            window.location.href = "login.html";
+
+        } else {
+
+            alert(data.mensaje);
+
+        }
+
+    } catch (error) {
+
+        console.error(error);
+
+        alert("No se pudo conectar con el servidor.");
+
     }
 
 });
