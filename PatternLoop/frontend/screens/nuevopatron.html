@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Patrón - PatternLoop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/nuevopatron.css">
+</head>
+<body>
+
+<header class="header">
+
+    <nav class="navbar container">
+
+        <div class="logo-area">
+
+            <a href="#" class="logo">
+                PatternLoop
+            </a>
+        </div>
+
+             <nav class="nav-links">
+                <a href="../index.html">Inicio</a>
+                <a href="explorar.html" >Explorar</a>
+                <a href="nuevopatron.html" class="active">Publicar</a>
+                <a href="perfil.html">Perfil</a>
+            </nav>
+
+        <div class="nav-icons">
+           
+        </div>
+
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <!-- ======================================
+                    CABECERA
+    ======================================= -->
+
+    <section class="page-header">
+
+        <h1>Publicar Nuevo Patrón</h1>
+
+        <p>
+            Comparte tu visión creativa con la comunidad de crochet.
+        </p>
+
+    </section>
+
+
+    <!-- ======================================
+                FORMULARIO PRINCIPAL
+    ======================================= -->
+
+    <section class="publish-grid">
+
+        <!-- IMAGEN -->
+        <div class="upload-column">
+
+            <label class="section-label">
+                Fotos del Proyecto
+            </label>
+
+            <div class="image-upload">
+
+                <i class="fa-regular fa-images"></i>
+
+                <p>
+                    Haz clic para subir la foto de tu obra maestra final
+                </p>
+
+                <span>JPG, PNG hasta 10MB</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORM -->
+        <div class="form-column">
+
+            <div class="input-group full">
+                <label>Título del Patrón</label>
+                <input type="text"
+                       placeholder="ej. Cárdigan de Verano de Algodón de Ensueño">
+            </div>
+
+            <div class="double-grid">
+
+                <div class="input-group">
+                    <label>Categoría</label>
+
+                    <select>
+                        <option value="Amigurumi">Amigurumi</option>
+                        <option value="Ropa">Ropa</option>
+                        <option value="Hogar">Hogar</option>
+                        <option value="Accesorios">Accesorios</option>
+                        <option value="Bebes">Bebes</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Dificultad</label>
+
+                    <select>
+                        <option value="Principiante">Principiante</option>
+                        <option value="Media">Media</option>
+                        <option value="Experto">Experto</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Tiempo Estimado</label>
+
+                    <div class="inline-input">
+                        <input type="number" placeholder="0">
+                        <span>Horas</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Tamaño del Ganchillo</label>
+
+                    <div class="inline-input">
+                        <input type="text" placeholder="4.0">
+                        <span>mm</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="input-group full">
+                <label>Descripción</label>
+
+                <textarea rows="5"></textarea>
+            </div>
+
+            <div class="actions">
+
+                <button class="preview-btn">
+                    <i class="fa-regular fa-eye"></i>
+                    Vista previa
+                </button>
+
+                <button class="publish-btn">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    Publicar patrón
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ======================================
+        MATERIALES Y ABREVIATURAS
+    ======================================= -->
+
+    <section class="info-grid">
+
+        <!-- materiales -->
+        <article class="card-section">
+
+            <div class="section-title">
+                <h2>
+                    <i class="fa-regular fa-folder"></i>
+                    Materiales y Herramientas
+                </h2>
+
+                <button class="add-btn">+</button>
+            </div>
+
+            <div class="list-item">
+                <span>300g Hilo de algodón suave (peso Aran)</span>
+                <button><i class="fa-regular fa-trash-can"></i></button>
+            </div>
+
+            <input type="text"
+                   placeholder="Añadir material...">
+
+        </article>
+
+
+        <!-- abreviaturas -->
+        <article class="card-section">
+
+            <div class="section-title">
+
+                <h2>
+                    <i class="fa-regular fa-square"></i>
+                    Abreviaturas
+                </h2>
+
+                <button class="add-btn purple">+</button>
+
+            </div>
+
+            <div class="abbreviation-item">
+
+                <strong>sc</strong>
+
+                <span>
+                    Punto bajo (Single Crochet)
+                </span>
+
+                <button>
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+
+            </div>
+
+            <div class="abbreviation-inputs">
+
+                <input type="text" placeholder="Sigla">
+
+                <input type="text" placeholder="Definición...">
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- ======================================
+            PASOS
+    ======================================= -->
+
+    <section class="steps">
+
+        <div class="steps-title">
+            <h2>
+                <i class="fa-regular fa-rectangle-list"></i>
+                Instrucciones Paso a Paso
+            </h2>
+        </div>
+
+        <article class="step-card">
+
+            <div class="step-header">
+
+                <span>Ronda 1: Base</span>
+
+                <div class="step-actions">
+                    <button>⌃</button>
+                    <button>✕</button>
+                </div>
+
+            </div>
+
+            <div class="step-body">
+
+                <div class="step-content">
+
+                    <p>
+                        Hacer un anillo mágico, 6 puntos bajos
+                        en el anillo. Unir con un punto deslizado
+                        al primer punto bajo. (6 puntos)
+                    </p>
+
+                    <div class="tags">
+                        <span>6 puntos</span>
+                        <span>Color: Crema</span>
+                    </div>
+
+                </div>
+
+                <div class="step-image">
+                    <i class="fa-regular fa-image"></i>
+                    <span>Añadir foto del proceso</span>
+                </div>
+
+            </div>
+
+        </article>
+
+        <div class="add-step">
+
+            <i class="fa-solid fa-circle-plus"></i>
+
+            <span>
+                Añadir Siguiente Ronda / Paso
+            </span>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="../js/nuevopatron.js"></script>
+</body>
+</html>

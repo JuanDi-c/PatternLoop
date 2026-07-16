@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - PatternLoop</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/perfil.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar container">
+
+            <div class="left-nav">
+                <a href="#" class="logo">PatternLoop</a>
+            </div>
+
+            <nav class="nav-links">
+                <a href="../index.html">Inicio</a>
+                <a href="explorar.html">Explorar</a>
+                <a href="nuevopatron.html">Publicar</a>
+                <a href="perfil.html" class="active2">Perfil</a>
+            </nav>
+
+                        <div class="profile-mini">
+                
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="profile-section">
+            <div class="profile-info">
+                <h1>Elena Merino</h1>
+                <span class="username">@elena_loops</span>
+
+                <div class="stats">
+                    <div class="stat">
+                        <strong>24</strong>
+                        <span>Patrones publicados</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabs -->
+        <section class="tabs">
+            <button class="tab active" id="btnPatrones">
+                Mis patrones
+            </button>
+
+            <button class="tab" id="btnFavoritos">
+                Favoritos
+            </button>
+        </section>
+
+        <!-- Contenedor dinámico -->
+        <section class="patterns-grid" id="patternsGrid">
+
+            <article class="pattern-card">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/450x300"
+                        alt="Suéter Nube de Otoño">
+
+                    <span class="badge">Intermedio</span>
+                </div>
+
+                <div class="card-body">
+                    <div class="title-row">
+                        <h2>Suéter Nube de Otoño</h2>
+
+                        <div class="card-actions">
+                            <button class="delete">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="meta">
+                        Lana Alpaca Soft · 12/10/2023
+                    </p>
+
+                    <div class="stats-row">
+                        <span>♡ 128</span>
+                        <span>💬 45</span>
+                        <span>👁 890</span>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <script src="../js/perfil.js"></script>
+
+</body>
+</html>

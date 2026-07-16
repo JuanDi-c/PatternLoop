@@ -1,0 +1,303 @@
+/* ==========================
+   RESET
+========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#e8e1dc;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+/* ==========================
+   CONTENEDOR PRINCIPAL
+========================== */
+
+.container{
+    width:100%;
+    max-width:1200px;
+    min-height:700px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background:#ede7e2;
+    border-radius:0 0 60px 0;
+    overflow:hidden;
+}
+
+/* ==========================
+   PANEL IZQUIERDO
+========================== */
+
+.brand-section{
+    position:relative;
+    background:#e7dfda;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px;
+}
+
+.brand-card{
+    width:260px;
+    height:190px;
+    background:white;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.04);
+}
+
+.brand-card img{
+    width:60%;
+    object-fit:contain;
+}
+
+.brand-section h1{
+    font-size:2rem;
+    color:#76656f;
+    margin-bottom:10px;
+}
+
+.brand-section p{
+    max-width:320px;
+    color:#7b6f75;
+    font-size:.95rem;
+    line-height:1.8;
+}
+
+/* línea decorativa */
+.decor-line{
+    position:absolute;
+    width:120%;
+    height:2px;
+    border-top:2px dashed #d4c6c0;
+    top:50%;
+    left:-10%;
+    z-index:0;
+}
+
+/* Mantener contenido encima */
+.brand-card,
+.brand-section h1,
+.brand-section p{
+    position:relative;
+    z-index:2;
+}
+
+/* ==========================
+   PANEL DERECHO
+========================== */
+
+.login-section{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:50px;
+    background:#f2ece7;
+}
+
+.login-card{
+    width:100%;
+    max-width:360px;
+}
+
+.login-card h2{
+    font-size:2rem;
+    line-height:1.2;
+    color:#1f1f1f;
+    margin-bottom:12px;
+}
+
+.subtitle{
+    color:#9b9290;
+    margin-bottom:35px;
+    font-size:.95rem;
+}
+
+.input-group{
+    margin-bottom:22px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:10px;
+    font-size:.85rem;
+    color:#766d69;
+}
+
+.input-wrapper{
+    position:relative;
+}
+
+.input-wrapper input{
+    width:100%;
+    border:none;
+    background:#f8f5f2;
+    padding:15px 45px;
+    border-radius:10px;
+    font-size:.95rem;
+    outline:none;
+}
+
+.input-wrapper i:first-child{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#9e9692;
+}
+
+.eye{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#9e9692;
+    cursor:pointer;
+}
+
+button{
+    width:100%;
+    border:none;
+    padding:16px;
+    border-radius:40px;
+    background:#91583b;
+    color:white;
+    font-size:1rem;
+    font-weight:500;
+    cursor:pointer;
+    transition:.3s;
+    margin-top:10px;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 25px rgba(145,88,59,.25);
+}
+
+button span{
+    margin-left:10px;
+}
+
+.register{
+    text-align:center;
+    margin-top:30px;
+    color:#8f8884;
+    font-size:.9rem;
+}
+
+.register a{
+    color:#91583b;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* ==========================
+   TABLETS
+========================== */
+
+@media (max-width: 900px){
+
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .brand-section{
+        padding:50px 30px;
+        min-height:350px;
+    }
+
+    .decor-line{
+        display:none;
+    }
+
+    .login-section{
+        padding:50px 30px;
+    }
+}
+
+/* ==========================
+   MÓVILES
+========================== */
+
+@media (max-width: 600px){
+
+    body{
+        padding:0;
+    }
+
+    .container{
+        border-radius:0;
+        min-height:100vh;
+    }
+
+    .brand-card{
+        width:210px;
+        height:150px;
+    }
+
+    .brand-section h1{
+        font-size:1.6rem;
+    }
+
+    .brand-section p{
+        font-size:.9rem;
+    }
+
+    .login-card h2{
+        font-size:1.8rem;
+    }
+
+    .input-wrapper input{
+        padding:14px 42px;
+    }
+
+    button{
+        padding:15px;
+    }
+}
+
+/* ==========================
+   MÓVILES PEQUEÑOS
+========================== */
+
+@media (max-width: 400px){
+
+    .brand-section{
+        padding:40px 20px;
+    }
+
+    .login-section{
+        padding:40px 20px;
+    }
+
+    .login-card h2{
+        font-size:1.5rem;
+    }
+}
+
+/* ==========================
+  Errores
+========================== */
+.error {
+    color: #ff4d4d;
+    font-size: 13px;
+    margin-top: 5px;
+    display: block;
+}
+
+.input-error {
+    border: 1px solid #ff4d4d;
+}

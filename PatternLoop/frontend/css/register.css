@@ -1,0 +1,287 @@
+/* =========================
+   RESET
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#e8e1dc;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+
+.container{
+    width:100%;
+    max-width:1400px;
+    min-height:850px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background:#ece5df;
+}
+
+/* =========================
+   PANEL IZQUIERDO
+========================= */
+
+.left-panel{
+    background:#e6dfda;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:45px;
+    padding:60px;
+}
+
+.logo-card{
+    width:180px;
+    height:180px;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.logo-card img{
+    width:75%;
+    object-fit:contain;
+}
+
+.left-panel h1{
+    color:#75636f;
+    font-size:3rem;
+    line-height:1.2;
+    font-weight:700;
+    text-align:center;
+}
+
+/* =========================
+   PANEL DERECHO
+========================= */
+
+.right-panel{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px;
+}
+
+.register-card{
+    width:100%;
+    max-width:480px;
+    background:#f0eae4;
+    border-radius:20px;
+    padding:55px;
+}
+
+.register-card h2{
+    color:#8f5b3d;
+    font-size:2.2rem;
+    margin-bottom:40px;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:22px;
+}
+
+.input-group label{
+    margin-bottom:8px;
+    font-size:.85rem;
+    color:#4d4d4d;
+}
+
+input{
+    width:100%;
+    border:1px solid #9d9d9d;
+    border-radius:14px;
+    padding:15px 18px;
+    font-size:.95rem;
+    background:#f4f1ee;
+    outline:none;
+    transition:.3s;
+}
+
+input:focus{
+    border-color:#8f5b3d;
+}
+
+.row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.password-wrapper{
+    position:relative;
+}
+
+.password-wrapper input{
+    padding-right:50px;
+}
+
+.password-wrapper i{
+    position:absolute;
+    right:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#7c7c7c;
+    cursor:pointer;
+}
+
+button{
+    width:100%;
+    border:none;
+    border-radius:40px;
+    background:#925b3d;
+    color:white;
+    padding:18px;
+    font-size:1rem;
+    cursor:pointer;
+    margin-top:15px;
+    transition:.3s;
+    box-shadow:0 8px 15px rgba(146,91,61,.20);
+}
+
+button:hover{
+    transform:translateY(-3px);
+}
+
+.login-link{
+    text-align:center;
+    margin-top:30px;
+    color:#666;
+    font-size:.9rem;
+}
+
+.login-link a{
+    text-decoration:none;
+    color:#5a4343;
+    font-weight:600;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:992px){
+
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .left-panel{
+        min-height:400px;
+    }
+
+    .left-panel h1{
+        font-size:2.3rem;
+    }
+
+    .register-card{
+        max-width:650px;
+    }
+}
+
+/* =========================
+   MÓVILES
+========================= */
+
+@media(max-width:768px){
+
+    body{
+        padding:0;
+    }
+
+    .container{
+        min-height:100vh;
+    }
+
+    .right-panel{
+        padding:25px;
+    }
+
+    .register-card{
+        padding:35px 25px;
+        border-radius:0;
+    }
+
+    .row{
+        grid-template-columns:1fr;
+        gap:0;
+    }
+
+    .left-panel{
+        padding:50px 25px;
+        gap:30px;
+    }
+
+    .logo-card{
+        width:150px;
+        height:150px;
+    }
+
+    .left-panel h1{
+        font-size:2rem;
+    }
+
+    .register-card h2{
+        font-size:1.8rem;
+    }
+}
+
+/* =========================
+   MÓVILES PEQUEÑOS
+========================= */
+
+@media(max-width:480px){
+
+    .left-panel h1{
+        font-size:1.7rem;
+    }
+
+    .register-card{
+        padding:30px 20px;
+    }
+
+    input{
+        padding:14px 16px;
+    }
+
+    button{
+        padding:16px;
+    }
+}
+
+
+/* ==========================
+  Errores
+========================== */
+
+.error {
+    color: #ff4d4d;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: block;
+}
+
+input:invalid:focus {
+    border: 1px solid #ff4d4d;
+}
+
+input:valid {
+    border: 1px solid #4CAF50;
+}
