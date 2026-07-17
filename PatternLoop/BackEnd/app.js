@@ -10,9 +10,9 @@ const app = express();
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-const usuariosRoutes = require("./Routes/usuarioRoutes");
+const usuariosRoutes = require("./routes/usuarioRoutes");
 
-const publicacionRoutes = require("./Routes/publicacionRoutes")
+const publicacionRoutes = require("./routes/publicacionRoutes")
 
 const comentariosRoutes = require("./routes/comentariosRoutes");
 

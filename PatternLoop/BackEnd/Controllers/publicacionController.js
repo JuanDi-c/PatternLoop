@@ -46,11 +46,6 @@ const crearPublicacion = async (req, res) => {
         });
 
     }
-
-    await nuevaPublicacion.save();
-
-    res.status(201).json(nuevaPublicacion);
-
 };
 
 

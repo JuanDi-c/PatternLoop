@@ -10,7 +10,7 @@ formulario.addEventListener("submit", async (e) => {
 
     try {
 
-        const respuesta = await fetch(`${API_URL}/usuarios/register`, {
+        const respuesta = await fetch(`${API_URL}/usuarios/registro`, {
 
             method: "POST",
 
@@ -30,15 +30,26 @@ formulario.addEventListener("submit", async (e) => {
 
         if (respuesta.ok) {
 
-            alert(data.mensaje);
+            mostrarToast(
+                "¡Cuenta creada! 🧶",
+                "Ahora puedes iniciar sesión en PatternLoop."
+            );
 
             formulario.reset();
 
-            window.location.href = "login.html";
+            setTimeout(() => {
+
+                window.location.href = "login.html";
+
+            }, 2000);
 
         } else {
 
-            alert(data.mensaje);
+            mostrarToast(
+                "No fue posible registrarte",
+                data.mensaje,
+                "error"
+            );
 
         }
 
@@ -46,7 +57,11 @@ formulario.addEventListener("submit", async (e) => {
 
         console.error(error);
 
-        alert("No se pudo conectar con el servidor.");
+        mostrarToast(
+            "Servidor no disponible",
+            "No fue posible conectar con el servidor.",
+            "error"
+        );
 
     }
 

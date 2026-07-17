@@ -1,45 +1,67 @@
-const form = document.getElementById("loginForm");
+const formulario = document.getElementById("loginForm");
 
-form.addEventListener("submit", function (e) {
+formulario.addEventListener("submit", async (e) => {
 
     e.preventDefault();
 
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
+    const correo = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
 
-    const emailError = document.getElementById("emailError");
-    const passwordError = document.getElementById("passwordError");
+    try {
 
-    emailError.textContent = "";
-    passwordError.textContent = "";
+        const respuesta = await fetch(`${API_URL}/usuarios/login`, {
 
-    let valido = true;
+            method: "POST",
 
-    // Validar correo
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            headers: {
+                "Content-Type": "application/json"
+            },
 
-    if (email === "") {
-        emailError.textContent = "El correo es obligatorio.";
-        valido = false;
-    } else if (!emailRegex.test(email)) {
-        emailError.textContent = "Ingrese un correo válido.";
-        valido = false;
+            body: JSON.stringify({
+                correo,
+                password
+            })
+
+        });
+
+        const data = await respuesta.json();
+
+        if (respuesta.ok) {
+
+            localStorage.setItem("token", data.token);
+            localStorage.setItem("usuario", JSON.stringify(data.usuario));
+
+            mostrarToast(
+                "¡Bienvenido! 🧶",
+                `Hola ${data.usuario.nombre}, disfruta explorando nuevos patrones.`
+            );
+
+            setTimeout(() => {
+
+                window.location.href = "../index.html";
+
+            }, 2000);
+
+        } else {
+
+            mostrarToast(
+                "Error al iniciar sesión",
+                data.mensaje,
+                "error"
+            );
+
+        }
+
+    } catch (error) {
+
+        console.error(error);
+
+        mostrarToast(
+            "Servidor no disponible",
+            "No fue posible conectar con el servidor.",
+            "error"
+        );
+
     }
 
-    // Validar contraseña
-    if (password === "") {
-        passwordError.textContent = "La contraseña es obligatoria.";
-        valido = false;
-    } else if (password.length < 8) {
-        passwordError.textContent =
-            "La contraseña debe tener al menos 8 caracteres.";
-        valido = false;
-    }
-
-    if (valido) {
-        console.log("Login correcto");
-
-        // Aquí iría la petición al backend
-        // form.submit();
-    }
 });

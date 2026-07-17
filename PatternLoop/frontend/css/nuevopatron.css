@@ -489,3 +489,179 @@ textarea{
         width:100%;
     }
 }
+
+#previewImagenes{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-top:20px;
+
+}
+
+.preview-img{
+
+    width:95px;
+
+    height:95px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    border:2px solid #eee;
+
+}
+
+.material-form{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr auto;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+.material-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:white;
+
+    padding:14px 18px;
+
+    border-radius:15px;
+
+    margin-bottom:12px;
+
+    border:1px solid #ece4dd;
+
+}
+
+.material-item button{
+
+    border:none;
+
+    background:none;
+
+    color:#c95b5b;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+.nuevo-paso{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    margin-top:30px;
+
+}
+
+.paso-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+    border:1px solid #e9ddd5;
+
+}
+
+.paso-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:15px;
+
+}
+
+.paso-header h3{
+
+    color:var(--brown);
+
+}
+
+.paso-header button{
+
+    border:none;
+
+    background:none;
+
+    color:#d9534f;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+.paso-card p{
+
+    line-height:1.7;
+
+}
+
+.publish-footer{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin:70px 0 100px;
+
+}
+
+.publish-footer .publish-btn{
+
+    min-width:280px;
+
+    padding:18px 45px;
+
+    font-size:1.05rem;
+
+    border-radius:50px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    transition:.3s;
+
+}
+
+.publish-footer .publish-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(155,101,67,.25);
+
+}
