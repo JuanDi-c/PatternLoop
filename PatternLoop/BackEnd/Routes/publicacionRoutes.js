@@ -11,13 +11,16 @@ const {
     obtenerPublicacion,
     actualizarPublicacion,
     eliminarPublicacion,
-    buscarPublicaciones
+    buscarPublicaciones,
+    obtenerMisPublicaciones
 
 } = require("../controllers/publicacionController");
 
 router.post("/", verificarToken, upload.array("imagenes", 5), crearPublicacion);
 
 router.get("/buscar", buscarPublicaciones);
+
+router.get( "/mis-publicaciones", verificarToken, obtenerMisPublicaciones);
 
 router.get("/", obtenerPublicaciones);
 

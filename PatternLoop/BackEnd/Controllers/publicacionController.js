@@ -48,6 +48,34 @@ const crearPublicacion = async (req, res) => {
     }
 };
 
+//obtener publicaciones
+const obtenerMisPublicaciones = async (req,res)=>{
+
+    try{
+
+        const publicaciones = await Publicacion.find({
+
+            autor:req.usuario.id
+
+        }).sort({
+
+            createdAt:-1
+
+        });
+
+        res.json(publicaciones);
+
+    }catch(error){
+
+        res.status(500).json({
+
+            mensaje:error.message
+
+        });
+
+    }
+
+};
 
 
 
@@ -223,5 +251,6 @@ module.exports = {
     obtenerPublicacion,
     actualizarPublicacion,
     eliminarPublicacion,
-    buscarPublicaciones
+    buscarPublicaciones,
+    obtenerMisPublicaciones
 };
