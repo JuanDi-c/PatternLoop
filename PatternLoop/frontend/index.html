@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PatternLoop</title>
 
     <!-- Fuente -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Iconos -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-          <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="icon" type="image/png" href="images/logo.png">
 
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/toast.css">
 </head>
+
 <body>
 
     <!-- ================= NAVBAR ================= -->
@@ -34,13 +36,13 @@
                 <li><a href="screens/perfil.html">Mi Perfil</a></li>
             </ul>
 
-<div class="nav-actions" id="navActions">
+            <div class="nav-actions" id="navActions">
 
-    <a href="screens/login.html" class="login-btn" id="loginBtn">
-        Iniciar Sesión
-    </a>
+                <a href="screens/login.html" class="login-btn" id="loginBtn">
+                    Iniciar Sesión
+                </a>
 
-</div>
+            </div>
 
         </nav>
     </header>
@@ -81,8 +83,7 @@
             </div>
 
             <div class="hero-image">
-                <img src="images/hero_image.png"
-                     alt="Crochet community">
+                <img src="images/hero_image.png" alt="Crochet community">
             </div>
 
         </section>
@@ -144,65 +145,13 @@
 
         <!-- ================= PATRONES ================= -->
 
-        <section class="patterns container" id="nuevos">
+<section class="patterns container" id="nuevos">
 
-            <h2>Patrones recientes</h2>
+    <h2>Patrones recientes</h2>
 
-            <!--<div class="patterns-grid">
+    <div class="patterns-grid" id="patternsGrid"></div>
 
-                <article class="featured-card">
-                    <img src="https://via.placeholder.com/800x900"
-                         alt="Patrón destacado">
-
-                    <div class="overlay">
-                        <h3>Cojín Fresa Gigante</h3>
-
-                        <p>
-                            Un proyecto divertido y suave
-                            para decorar cualquier habitación.
-                        </p>
-                    </div>
-                </article>
-
-                <div class="secondary-grid">
-
-                    <article class="card large">
-                        <img src="https://via.placeholder.com/600x350"
-                             alt="Chal">
-
-                        <div class="card-info">
-                            <h4>Chal Brisa de Verano</h4>
-                            <span>Por CrochetMaster_99</span>
-                        </div>
-
-                        <button class="favorite">
-                            ♥
-                        </button>
-                    </article>
-
-                    <article class="card">
-                        <img src="https://via.placeholder.com/350x350"
-                             alt="Dragón">
-
-                        <div class="small-info">
-                            Dragón Lila
-                        </div>
-                    </article>
-
-                    <article class="card">
-                        <img src="https://via.placeholder.com/350x350"
-                             alt="Colección">
-
-                        <div class="small-info">
-                            Colección Otoño
-                        </div>
-                    </article>
-
-                </div>
-
-            </div> -->
-
-        </section>
+</section>
 
     </main>
 
@@ -239,6 +188,7 @@
 
     </footer>
 
+    <script src="js/api.js"></script>
     <script src="js/toast.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/index.js"></script>
