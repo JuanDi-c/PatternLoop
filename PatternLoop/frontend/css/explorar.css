@@ -370,4 +370,28 @@ button{
         font-size:1.3rem;
     }
 
+    .tags2 a{
+
+    text-decoration:none;
+
+    color:white;
+
+    background:var(--purple);
+
+    padding:8px 16px;
+
+    border-radius:20px;
+
+    font-size:.85rem;
+
+    transition:.3s;
+
+}
+
+.tags2 a:hover{
+
+    opacity:.9;
+
+}
+
 }

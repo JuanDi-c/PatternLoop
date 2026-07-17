@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explorar Patrones - PatternLoop</title>
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- FontAwesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
@@ -16,126 +14,77 @@
 </head>
 <body>
 
-    <!-- ================= HEADER ================= -->
+<header class="header">
 
-    <header class="header">
+    <div class="container navbar">
 
-        <div class="container navbar">
+        <div class="logo-container">
+            <a href="../index.html" class="logo">
+                PatternLoop
+            </a>
+        </div>
 
-            <div class="logo-container">
+        <nav class="nav-links">
+            <a href="../index.html">Inicio</a>
+            <a href="#" class="active">Explorar</a>
+            <a href="nuevopatron.html">Publicar</a>
+            <a href="perfil.html">Perfil</a>
+        </nav>
 
-                <a href="#" class="logo">
-                    PatternLoop
-                </a>
+        <div class="header-actions"></div>
+
+    </div>
+
+</header>
+
+<main class="container">
+
+    <section class="hero">
+
+        <h1>Explorar Patrones</h1>
+
+        <div class="search-box">
+
+            <div class="search-input">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    id="busqueda"
+                    type="text"
+                    placeholder="Busca patrones para tu próximo proyecto..."
+                >
+
             </div>
 
-            <nav class="nav-links">
-                <a href="../index.html">Inicio</a>
-                <a href="#" class="active">Explorar</a>
-                <a href="nuevopatron.html">Publicar</a>
-                <a href="perfil.html">Perfil</a>
-            </nav>
-
-            <div class="header-actions">
-            </div>
+            <button class="search-btn" id="buscarBtn">
+                Buscar
+            </button>
 
         </div>
 
-    </header>
+        <p class="quote">
+            "Un punto a tiempo ahorra ciento..."
+        </p>
 
-    <!-- ================= MAIN ================= -->
+    </section>
 
-    <main class="container">
+    <section class="top-bar">
 
-        <!-- Título -->
-        <section class="hero">
+        <span id="cantidadPatrones">
+            Cargando publicaciones...
+        </span>
 
-            <h1>Explorar Patrones</h1>
+    </section>
 
-            <!-- Buscador -->
-            <div class="search-box">
+    <section class="patterns-grid" id="patternsGrid">
 
-                <div class="search-input">
+    </section>
 
-                    <i class="fa-solid fa-magnifying-glass"></i>
+</main>
 
-                    <input
-                        type="text"
-                        placeholder="Busca patrones para tu próximo proyecto..."
-                    >
+<script src="../js/api.js"></script>
+<script src="../js/explorar.js"></script>
 
-                </div>
-
-                <button class="search-btn">
-                    Buscar
-                </button>
-
-            </div>
-
-            <p class="quote">
-                "Un punto a tiempo ahorra ciento..."
-            </p>
-
-        </section>
-
-        <!-- Filtros -->
-        <section class="top-bar">
-
-            <span>
-                Mostrando patrones encontrados
-            </span>
-
-
-        </section>
-
-        <!-- Tarjetas -->
-        <section class="patterns-grid">
-
-            <!-- CARD -->
-            <article class="pattern-card">
-
-                <div class="card-image">
-
-                    <img src="https://via.placeholder.com/400x280"
-                         alt="Milo the Yarn Cat">
-
-                    <button class="favorite">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-
-                    <span class="difficulty intermediate">
-                        Intermedio
-                    </span>
-
-                </div>
-
-                <div class="card-content">
-
-                    <div class="title-row">
-                        <h2>Milo the Yarn Cat</h2>
-                    </div>
-
-                    <p class="author">
-                        por CraftyPaws
-                    </p>
-
-                    <div class="tags">
-                        <span>Amigurumi</span>
-                    </div>
-
-                    <div class="tags2" >
-                        <span>Ver patron</span>
-                    </div>
-                    
-
-                </div>
-
-            </article>
-
-        </section>
-
-    </main>
-
-    <script src="../js/esplorar.js"></script>
 </body>
 </html>
